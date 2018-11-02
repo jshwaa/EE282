@@ -16,24 +16,22 @@ First, download the most recent (last modified 10-4-18) gzipped fasta file for a
 __Calculate the following for the whole genome:__
 1. Total number of nucleotides:
 `grep` out any sequence headers, then subtract total newlines from total characters (which includes newline count):
-
-    zgrep -v "^>" dmel-all-chromosome-r6.24.fasta.gz | wc -lm | awk '{print $2-$1}'
-    143726002
-    
+```
+ zgrep -v "^>" dmel-all-chromosome-r6.24.fasta.gz | wc -lm | awk '{print $2-$1}'
+ 143726002
+```    
 2. Total number of Ns
 `grep` out sequence headers, delete anything that is the complement of N nucleotides, then count characters:
-
-    zgrep -v "^>" dmel-all-chromosome-r6.24.fasta.gz | tr -cd '[N]' | wc -m
-    1152978
-    
-    
+```
+ zgrep -v "^>" dmel-all-chromosome-r6.24.fasta.gz | tr -cd '[N]' | wc -m
+ 1152978
+```      
 3. Total number of sequences
 Each sequence begins with a ">", so just count lines beginning with this with `grep`:
-
-    zgrep -c "^>" dmel-all-chromosome-r6.24.fasta.gz
-    1870
-    
-    
+```
+zgrep -c "^>" dmel-all-chromosome-r6.24.fasta.gz
+1870
+```    
 _Summarize an annotation file
 Go to the most current download genomes section at flybase.org and download the gzipped gtf annotation file for D. melanogaster._
 
