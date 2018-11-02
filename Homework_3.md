@@ -1,7 +1,7 @@
 _Summarize a genome assembly
 We will be working with the Drosophila melanogaster genome. You can start at flybase.org. Go to the most current download genomes section and download the gzipped fasta file for all chromosomes._
 
-##File integrity
+## File integrity
 __Verify the file integrity of the gzipped fasta file using a checksum__
 
 First, download the most recent (last modified 10-4-18) gzipped fasta file for all chromosomes, and checksum against reposity md5sum.txt:
@@ -35,7 +35,7 @@ zgrep -c "^>" dmel-all-chromosome-r6.24.fasta.gz
 _Summarize an annotation file
 Go to the most current download genomes section at flybase.org and download the gzipped gtf annotation file for D. melanogaster._
 
-##File integrity
+## File integrity
 __Verify the file integrity of the gzipped gtf annotation using a checksum__
  
     wget ftp://ftp.flybase.net/genomes/Drosophila_melanogaster/dmel_r6.24_FB2018_05/gtf/dmel-all-r6.24.gtf.gz
