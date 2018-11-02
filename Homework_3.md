@@ -15,17 +15,19 @@ First, download the most recent (last modified 10-4-18) gzipped fasta file for a
   
 __Calculate the following for the whole genome:__
 1. Total number of nucleotides:
-   
-    `zgrep -v "^>" dmel-all-chromosome-r6.24.fasta.gz | wc -lm | awk '{print $2$1}'`
+
+   `zgrep -v "^>" dmel-all-chromosome-r6.24.fasta.gz | wc -lm | awk '{print $2-$1}'`
+   `143726002`
 
 2. Total number of Ns:
 
-    `zcat dmel-all-chromosome-r6.24.fasta.gz | grep -v "^>" | tr -cd '[N]' | wc -m`
-
+   `zcat dmel-all-chromosome-r6.24.fasta.gz | grep -v "^>" | tr -cd '[N]' | wc -m`
+   `1152978`
+    
 3. Total number of sequences:
 
     `zgrep -c "^>" dmel-all-chromosome-r6.24.fasta.gz`
-    
+    `1870`
     
 _Summarize an annotation file
 Go to the most current download genomes section at flybase.org and download the gzipped gtf annotation file for D. melanogaster._
