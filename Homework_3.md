@@ -46,7 +46,7 @@ __Verify the file integrity of the gzipped gtf annotation using a checksum__
 __Print a summary report with the following information:__
   1. Total number of features of each type, sorted from the most common to the least common
   
-    zcat *gz | cut -f3 | sort | uniq -c | sort -rn        
+    zcat *.gtf.gz | cut -f3 | sort | uniq -c | sort -rn        
     187315 exon
     161014 CDS
     46339 5UTR
@@ -66,11 +66,13 @@ __Print a summary report with the following information:__
   
   2. Total number of genes per chromosome arm (X, Y, 2L, 2R, 3L, 3R, 4)
    
-    zcat *gz | cut -f1,3 | grep -w "gene" | grep -E -o 'X|Y|2L|2R|3L|3R|4' | sort | uniq -c
+    zcat *.gtf.gz | cut -f1,3 | grep -w "gene" | grep -E -w -o 'X|Y|2L|2R|3L|3R|4' | sort | uniq -c
     3501 2L
     3628 2R
     3464 3L
     4202 3R
-    122 4
+    111 4
     2676 X
     113 Y
+
+
