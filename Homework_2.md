@@ -29,6 +29,10 @@ Subsetting my matrix and my data frame with [,1], and my data frame with [[1]] a
 This shows that matrices and data frames can return the same column vector by indexing with a comma or double brackets, but using single brackets will return the corresponding data frame column with its column header (rather than a vector).
 
 
+### Question 2 Comments:
+
+Good job. Concise and correct.
+
 _Ask a question that requires a student to understand how to create a simple script and make it usable by everyone, but only writeable by its creator. Your question should require an answer using chmod NNN (using octal permissions).
 Hint 1: in order for a script to be executable, it must be readable and executable
 Hint 2: in order for a script to be executable, all of its parent directories must be executable_
