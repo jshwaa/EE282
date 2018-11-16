@@ -52,3 +52,5 @@ Then, to change access permissions for this file, you would use `chmod nnn path`
 
 These octal permissions make the script readable/writeable/executable/ for the user (7 = 111 bitmask = __r__(ead)__w__(rite)(e)__x__(ecute)) but only readable/executable by others (5 = 101 = r-x) and the parent directories executable by others so that the script can be accessed. The absolute path `~/TAscript/discgrades.sh` can then be shared with other TAs, allowing them to run the script that will create the directory structure for grading this class in their filesystems.
 
+### Queston 3 Comments:
+This was very well done, but there are a few things I would like to mention. The first being that the '~' is specific to each user and is the same as doing $HOME. with this case each user would have a different set of files. Also I was wondering what the purpose of read SEC was. The last thing is that inorder for users to read the discgrades.sh file the parent directories should also be readable by all users. i.e. ~/ and ~/TAscript so instead of 711, it should be 755 for all 3. Other than that, question 3 was very well done.
